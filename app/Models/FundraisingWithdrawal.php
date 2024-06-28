@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class FundraisingWithdrawal extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
 
     protected $fillable = [
         "proof",
@@ -21,4 +21,6 @@ class FundraisingWithdrawal extends Model
         "fundraiser_id",
         "fundraising_id",
     ];
+    
+    protected $dates = ['deleted_at'];
 }

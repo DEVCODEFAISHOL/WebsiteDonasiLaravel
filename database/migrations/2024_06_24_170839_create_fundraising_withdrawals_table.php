@@ -23,6 +23,7 @@ return new class extends Migration
             $table->boolean('has_set')->default(false);
             $table->foreignId('fundraiser_id')->constrained()->onDelete('cascade');
             $table->foreignId('fundraising_id')->constrained()->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
