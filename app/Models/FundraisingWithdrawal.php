@@ -23,4 +23,12 @@ class FundraisingWithdrawal extends Model
     ];
     
     protected $dates = ['deleted_at'];
+
+    public function fundraising(){
+        return $this->belongsTo(Fundraising::class);
+    }
+    public function fundraiser(){
+        return $this->belongsTo(Fundraiser::class);
+    }
+
 }
