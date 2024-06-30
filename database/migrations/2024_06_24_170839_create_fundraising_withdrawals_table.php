@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('amount_requested');
             $table->integer('amount_received')->nullable();
             $table->boolean('has_received')->default(false);
-            $table->boolean('has_set')->default(false);
+            $table->boolean('has_sent')->default(false);
             $table->foreignId('fundraiser_id')->constrained()->onDelete('cascade');
             $table->foreignId('fundraising_id')->constrained()->onDelete('cascade');
             $table->softDeletes();

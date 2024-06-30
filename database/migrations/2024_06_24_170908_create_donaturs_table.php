@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('donaturs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('fundraising_id');
             $table->string('name');
-            $table->integer('total_amount');
             $table->string('phone_number');
+            $table->unsignedBigInteger('total_amount');
+            $table->unsignedBigInteger('fundraising_id');
             $table->text('notes')->nullable();
-            $table->boolean('is_paid')->default(false);
+            $table->boolean('is_paid');
             $table->string('proof');
             $table->softDeletes();
             $table->timestamps();

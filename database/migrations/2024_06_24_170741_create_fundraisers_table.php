@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('fundraisers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->boolean('is_active')->default(true);
             $table->softDeletes();
             $table->timestamps();
