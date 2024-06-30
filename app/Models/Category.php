@@ -15,4 +15,9 @@ class Category extends Model
         "icon",
     ];
     protected $dates = ['deleted_at'];
+
+    //ORM
+    public  function fundraisings(){
+        return $this->hasMany(Fundraising::class);
+    }
 }
