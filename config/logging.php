@@ -127,6 +127,12 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'CategoryController' => [
+        'driver' => 'daily', // atau sesuaikan dengan driver yang Anda inginkan
+        'path' => storage_path('logs/category_controller.log'),
+        'level' => 'info',
+        'days' => 14,
+        ],
     ],
 
 ];

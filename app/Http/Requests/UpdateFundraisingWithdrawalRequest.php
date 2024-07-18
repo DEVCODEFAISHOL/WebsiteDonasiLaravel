@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreCategoryRequest extends FormRequest
+class UpdateFundraisingWithdrawalRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +23,7 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             //
-            'name' => ['required','string','max:255'],
-            'icon' => ['required','image','mimes:png,jpg,jpeg'],
+            'proof'=> ['required','image','mimes:png,jpg,jpeg'],
         ];
     }
 }
