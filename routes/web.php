@@ -58,8 +58,7 @@ Route::middleware('auth')->group(function () {
             // Route::post('/fundraiser/apply', [DashboardController::class, 'apply_fundraiser'])
             //     ->name('fundraiser.apply');
 
-            Route::get('/my-withdrawals', [DashboardController::class, 'my_withdrawals'])
-                ->name('my_withdrawals');
+            Route::get('/my-withdrawals', [DashboardController::class, 'my_withdrawals'])->name('my-withdrawals');
 
             Route::get('/my-withdrawals/details/{fundraisingWithdrawal}', [DashboardController::class, 'apply_fundraiser'])
                 ->name('my_withdrawals.details');
